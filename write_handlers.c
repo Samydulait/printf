@@ -177,7 +177,7 @@ int write_unsgnd(int is_negative, int ind,
 	if (width > length)
 	{
 		for (i = 0; i < width - length; i++)
-		
+
 			buffer[i] = padd;
 
 		buffer[i] = '\0';
@@ -240,7 +240,7 @@ int write_pointer(char buffer[], int ind, int length,
 				buffer[--padd_start] = extra_c;
 			buffer[1] = '0';
 			buffer[2] = 'x';
-			return (write(1, &buffer[padd_start], i - padd_start) 
+			return (write(1, &buffer[padd_start], i - padd_start) +
 				write(1, &buffer[ind], length - (1 - padd_start) - 2));
 		}
 	}
